@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "atheneum:ancient_tome",
+    "atheneum:shadowborne_tome",
+    "atheneum:verdant_tome",
+    "atheneum:dreamers_tome"
+  ]
+}

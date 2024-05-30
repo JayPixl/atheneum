@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LM ",
+    "MM ",
+    "   "
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "M": {
+      "item": "atheneum:ancient_manuscript"
+    }
+  },
+  "result": {
+    "id": "atheneum:ancient_tome"
+  }
+}

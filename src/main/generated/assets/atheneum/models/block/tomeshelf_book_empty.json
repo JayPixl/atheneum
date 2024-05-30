@@ -1,0 +1,6 @@
+{
+  "parent": "atheneum:block/template_tomeshelf_book",
+  "textures": {
+    "texture": "atheneum:block/tomeshelf_book_empty"
+  }
+}

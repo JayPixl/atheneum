@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "atheneum",
+	"version": "${version}",
+	"name": "atheneum",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/atheneum/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"jpxl.atheneum.Atheneum"
+		],
+		"client": [
+			"jpxl.atheneum.AtheneumClient"
+		],
+		"fabric-datagen": [
+			"jpxl.atheneum.AtheneumDataGenerator"
+		]
+	},
+	"mixins": [
+		"atheneum.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

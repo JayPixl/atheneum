@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "jpxl.atheneum.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"EnchantingTableBlockMixin",
+		"FarmlandBlockMixin",
+		"PlayerEntityMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

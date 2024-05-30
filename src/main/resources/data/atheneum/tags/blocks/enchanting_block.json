@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bookshelf",
+    "minecraft:wither_skeleton_skull",
+    "minecraft:wither_skeleton_wall_skull",
+    "minecraft:soul_lantern",
+    "minecraft:candle",
+    "minecraft:cobweb"
+  ]
+}
