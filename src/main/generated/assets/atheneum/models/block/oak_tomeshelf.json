@@ -1,8 +1,0 @@
-{
-  "parent": "atheneum:block/template_tomeshelf",
-  "textures": {
-    "front": "atheneum:block/oak_tomeshelf_front",
-    "side": "atheneum:block/oak_tomeshelf_side",
-    "top": "atheneum:block/oak_tomeshelf_top"
-  }
-}

@@ -257,13 +257,12 @@ public class AtheneumConfig {
                     .fromJson(normalized, AtheneumConfig.class);
             //System.out.println(config.list.get(0));
             return config;
-        } catch (IOException | SyntaxError e) {
+        } catch (IOException e) {
             e.printStackTrace();
-            if (e instanceof IOException) {
-                return new AtheneumConfig(); // You could also throw a RuntimeException instead
-            } else {
-                throw new RuntimeException(e);
-            }
+            return new AtheneumConfig();
+        } catch (SyntaxError e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 

@@ -20,9 +20,9 @@ import java.util.*;
 public abstract class NewEnchantmentHelper {
     public static int getEnchantmentStatsPerLevel(TableLevelStats stat, int level) {
         return switch (stat) {
-            case MAX_POWER -> (15 + (level * 5));
-            case MAX_STABILITY -> (15 + (level * 5));
-            case MAX_INSIGHT -> (15 + (level * 5));
+            case MAX_POWER -> (5 + (level * 5));
+            case MAX_STABILITY -> (5 + (level * 5));
+            case MAX_INSIGHT -> (5 + (level * 5));
             case MAX_LAPIS -> Math.min(10, level);
             case MAX_TOMES -> Math.clamp(level / 2, 1, 5);
             case MAX_ARTIFACTS -> Math.clamp(level / 2, 1, 5);
@@ -314,11 +314,11 @@ public abstract class NewEnchantmentHelper {
         }
     }
 
-    public static final int DEFAULT_POWER = 5;
+    public static final int DEFAULT_POWER = 1;
     public static final int DEFAULT_RARITY = 0;
-    public static final int DEFAULT_INSIGHT = 5;
+    public static final int DEFAULT_INSIGHT = 1;
     public static final int DEFAULT_CHAOS = 10;
-    public static final int DEFAULT_SYNERGY = 5;
+    public static final int DEFAULT_SYNERGY = 1;
     public static final int DEFAULT_QUANTITY = 1;
 
     public static final List<BlockPos> POWER_PROVIDER_OFFSETS = BlockPos.stream(-2, 0, -2, 2, 2, 2).filter(pos -> Math.abs(pos.getX()) == 2 || Math.abs(pos.getZ()) == 2).map(BlockPos::toImmutable).toList();

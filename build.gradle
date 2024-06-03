@@ -52,7 +52,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// Jankson
-	implementation "blue.endless:jankson:1.2.3"
+	include implementation("blue.endless:jankson:1.2.3")
 	
 }
 
@@ -80,7 +80,7 @@ java {
 
 jar {
 	from("LICENSE") {
-		rename { "${it}_${project.base.archivesName.get()}"}
+		rename { "${it}_${project.base.archivesName.get()}" }
 	}
 }
 
