@@ -52,32 +52,18 @@ public class Atheneum implements ModInitializer {
 		config.saveConfig();
 
 		ModEnchantments.registerEnchantments();
-		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(literal("resetenchantinglevel")
-				.executes(context -> {
-					ServerCommandSource source = context.getSource();
-					IEntityDataSaver player = (IEntityDataSaver) source.getPlayer();
-					if (player != null) {
-						EnchantLevelData.resetEnchantingLevels(player);
-						source.sendFeedback(() -> Text.literal("Enchanting Levels reset"), false);
-						return 1;
-					}
-					source.sendError(Text.literal("No player found to reset."));
-					return 0;
-			})));
-		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(literal("getenchantments")
-				.executes(context -> {
-					ServerCommandSource source = context.getSource();
-					IEntityDataSaver player = (IEntityDataSaver) source.getPlayer();
-					if (player != null) {
-						ItemEnchantmentsComponent.Builder builder = new ItemEnchantmentsComponent.Builder(((PlayerEntity) player).getInventory().getMainHandStack().getEnchantments());
-						for (RegistryEntry<Enchantment> ench : builder.getEnchantments()) {
-							source.sendFeedback(() -> Registries.ENCHANTMENT.get(ench.getKey().get()).getName(builder.getLevel(Registries.ENCHANTMENT.get(ench.getKey().get()))), false);
-						}
-						return 1;
-					}
-					source.sendError(Text.literal("No player found to eat chicken."));
-					return 0;
-				})));
+//		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(literal("resetenchantinglevel")
+//				.executes(context -> {
+//					ServerCommandSource source = context.getSource();
+//					IEntityDataSaver player = (IEntityDataSaver) source.getPlayer();
+//					if (player != null) {
+//						EnchantLevelData.resetEnchantingLevels(player);
+//						source.sendFeedback(() -> Text.literal("Enchanting Levels reset"), false);
+//						return 1;
+//					}
+//					source.sendError(Text.literal("No player found to reset."));
+//					return 0;
+//			})));
 
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();

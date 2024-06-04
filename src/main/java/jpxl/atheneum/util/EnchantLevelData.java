@@ -10,7 +10,7 @@ public class EnchantLevelData {
         int enchXP = nbt.getInt("xp");
         int maxXp = NewEnchantmentHelper.getEnchLevelXpPerLevel(enchLevel);
 
-        System.out.println("OLD ENCH STATS: Level " + enchLevel + ", " + enchXP + " XP, Level max: " + maxXp + ", Amount to add: " + amount);
+//        System.out.println("OLD ENCH STATS: Level " + enchLevel + ", " + enchXP + " XP, Level max: " + maxXp + ", Amount to add: " + amount);
 
         int newAmount = enchXP + amount;
         if (newAmount >= maxXp) {

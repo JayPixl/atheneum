@@ -1,0 +1,364 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "atheneum:block/oak_tomeshelf",
+        "uvlock": true,
+        "y": 0
+      },
+      "when": {
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_empty",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "tome_slot": "empty"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_ancient_tome",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "tome_slot": "ancient_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_shadowborne_tome",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "tome_slot": "shadowborne_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_verdant_tome",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "tome_slot": "verdant_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_dreamers_tome",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "tome_slot": "dreamers_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/oak_tomeshelf",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_empty",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "tome_slot": "empty"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_ancient_tome",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "tome_slot": "ancient_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_shadowborne_tome",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "tome_slot": "shadowborne_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_verdant_tome",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "tome_slot": "verdant_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_dreamers_tome",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "tome_slot": "dreamers_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/oak_tomeshelf",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_empty",
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "tome_slot": "empty"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_ancient_tome",
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "tome_slot": "ancient_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_shadowborne_tome",
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "tome_slot": "shadowborne_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_verdant_tome",
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "tome_slot": "verdant_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_dreamers_tome",
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "tome_slot": "dreamers_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/oak_tomeshelf",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_empty",
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "tome_slot": "empty"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_ancient_tome",
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "tome_slot": "ancient_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_shadowborne_tome",
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "tome_slot": "shadowborne_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_verdant_tome",
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "tome_slot": "verdant_tome"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "atheneum:block/tomeshelf_book_dreamers_tome",
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "tome_slot": "dreamers_tome"
+          }
+        ]
+      }
+    }
+  ]
+}

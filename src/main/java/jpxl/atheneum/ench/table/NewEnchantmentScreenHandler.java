@@ -354,13 +354,13 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
                     List<NewEnchantmentLevelEntry> returnList = corruptEnchantmentsInList(world, itemStack, targetList, totalList, treasureAllowed, true);
                     generateClues(returnList, targetList, world, adjustedPower, treasureAllowed, itemStack);
 
-                    System.out.println("CLUES:");
-                    for (int z = 0; z < 10; z++) {
-                        if (clueAccuracy[z] != -1) {
-                            String name = outputIds[z] == -2 ? "JSLEIN" : outputIds[z] == -1 ? "NONE" : Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString();
-                            System.out.println(name + " - " + clueAccuracy[z] + "%");
-                        }
-                    }
+//                    System.out.println("CLUES:");
+//                    for (int z = 0; z < 10; z++) {
+//                        if (clueAccuracy[z] != -1) {
+//                            String name = outputIds[z] == -2 ? "JSLEIN" : outputIds[z] == -1 ? "NONE" : Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString();
+//                            System.out.println(name + " - " + clueAccuracy[z] + "%");
+//                        }
+//                    }
 
                     xpCost = Math.max(1, Math.round((((float) power + ((float) rarityBonus) + (this.getUsableLapisCount() * 2)) / 8f)));
                     minLevel = Math.max(5, Math.round((((float) power + ((float) rarityBonus) + (this.getUsableLapisCount() * 2)) / 2f)));
@@ -371,7 +371,7 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
                 if (NewEnchantmentHelper.getEnchantments(itemStack).stream().anyMatch(Enchantment::isCursed)) {
                     // DISENCHANTING
                     this.context.run((world, blockPos) -> {
-                        System.out.println("CURSED!");
+//                        System.out.println("CURSED!");
                         this.resetOutput(this.screenIndex != NewEnchantmentHelper.TableScreens.CURSED.ordinal());
                         this.screenIndex = NewEnchantmentHelper.TableScreens.CURSED.ordinal();
                         this.generateTableStats();
@@ -391,12 +391,12 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
 
                             generateCurseliftClues(returnList, targetList);
 
-                            System.out.println("CLUES:");
-                            for (int z = 0; z < 10; z++) {
-                                if (outputIds[z] >= 0) {
-                                    System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
-                                }
-                            }
+//                            System.out.println("CLUES:");
+//                            for (int z = 0; z < 10; z++) {
+//                                if (outputIds[z] >= 0) {
+//                                    System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
+//                                }
+//                            }
 
                             // Calculate Requirements/Costs
 
@@ -425,7 +425,7 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
                 } else {
                     // TRANSFER
                     this.context.run((world, blockPos) -> {
-                        System.out.println("TRANSFER! (CONTENT CHANGED)");
+                        //System.out.println("TRANSFER! (CONTENT CHANGED)");
                         this.resetOutput(this.screenIndex != NewEnchantmentHelper.TableScreens.TRANSFER.ordinal());
                         this.screenIndex = NewEnchantmentHelper.TableScreens.TRANSFER.ordinal();
                         this.generateTableStats();
@@ -446,12 +446,12 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
 
                             generateTransferClues(returnList, targetList);
 
-                            System.out.println("CLUES:");
-                            for (int z = 0; z < 10; z++) {
-                                if (outputIds[z] >= 0) {
-                                    System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
-                                }
-                            }
+//                            System.out.println("CLUES:");
+//                            for (int z = 0; z < 10; z++) {
+//                                if (outputIds[z] >= 0) {
+//                                    System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
+//                                }
+//                            }
 
                             // Calculate Requirements/Costs
 
@@ -507,7 +507,7 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
             if (NewEnchantmentHelper.hasEnchantments(itemStack)) {
                 if (NewEnchantmentHelper.getEnchantments(itemStack).stream().anyMatch(Enchantment::isCursed)) {
                     // DISENCHANTING
-                    System.out.println("CURSED!");
+//                    System.out.println("CURSED!");
 
                     List<NewEnchantmentLevelEntry> targetList = NewEnchantmentHelper.enchantmentEntryListFromItemStack(itemStack);
 
@@ -522,7 +522,7 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
                     }
 
                     this.context.run((world, blockPos) -> {
-                        System.out.println("CURSELIFTING! (ID < 10)");
+//                        System.out.println("CURSELIFTING! (ID < 10)");
                         this.resetOutput(this.screenIndex != NewEnchantmentHelper.TableScreens.CURSED.ordinal());
                         this.screenIndex = NewEnchantmentHelper.TableScreens.CURSED.ordinal();
                         this.generateTableStats();
@@ -538,12 +538,12 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
 
                             generateCurseliftClues(returnList, targetList);
 
-                            System.out.println("CLUES:");
-                            for (int z = 0; z < 10; z++) {
-                                if (outputIds[z] >= 0) {
-                                    System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
-                                }
-                            }
+//                            System.out.println("CLUES:");
+//                            for (int z = 0; z < 10; z++) {
+//                                if (outputIds[z] >= 0) {
+//                                    System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
+//                                }
+//                            }
 
                             // Calculate Requirements/Costs
 
@@ -585,7 +585,7 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
                     }
 
                     this.context.run((world, blockPos) -> {
-                        System.out.println("TRANSFER! (ID < 10)");
+//                        System.out.println("TRANSFER! (ID < 10)");
                         this.resetOutput(this.screenIndex != NewEnchantmentHelper.TableScreens.TRANSFER.ordinal());
                         this.screenIndex = NewEnchantmentHelper.TableScreens.TRANSFER.ordinal();
                         this.generateTableStats();
@@ -601,12 +601,12 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
 
                             generateTransferClues(returnList, targetList);
 
-                            System.out.println("CLUES:");
-                            for (int z = 0; z < 10; z++) {
-                                if (outputIds[z] >= 0) {
-                                    System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
-                                }
-                            }
+//                            System.out.println("CLUES:");
+//                            for (int z = 0; z < 10; z++) {
+//                                if (outputIds[z] >= 0) {
+//                                    System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
+//                                }
+//                            }
 
                             // Calculate Requirements/Costs
 
@@ -702,7 +702,7 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
                     } else {
                         // TRANSFER
                         this.context.run((world, blockPos) -> {
-                            System.out.println("TRANSFER! (BUTTON CLICKED!)");
+//                            System.out.println("TRANSFER! (BUTTON CLICKED!)");
                             this.resetOutput(this.screenIndex != NewEnchantmentHelper.TableScreens.TRANSFER.ordinal());
                             this.screenIndex = NewEnchantmentHelper.TableScreens.TRANSFER.ordinal();
                             this.generateTableStats();
@@ -724,12 +724,12 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
 
                                 generateTransferClues(returnList, targetList);
 
-                                System.out.println("CLUES:");
-                                for (int z = 0; z < 10; z++) {
-                                    if (outputIds[z] >= 0) {
-                                        System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
-                                    }
-                                }
+//                                System.out.println("CLUES:");
+//                                for (int z = 0; z < 10; z++) {
+//                                    if (outputIds[z] >= 0) {
+//                                        System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
+//                                    }
+//                                }
 
                                 // Calculate Requirements/Costs
 
@@ -752,10 +752,10 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
                                     minLevel = 0;
                                 }
 
-                                System.out.println("SELECTED LIST:");
-                                for (NewEnchantmentLevelEntry entry : selectedList) {
-                                    System.out.println(entry.enchantment.getName(entry.level).getString());
-                                }
+//                                System.out.println("SELECTED LIST:");
+//                                for (NewEnchantmentLevelEntry entry : selectedList) {
+//                                    System.out.println(entry.enchantment.getName(entry.level).getString());
+//                                }
 
                                 if (!selectedList.isEmpty() && itemStack2.getCount() >= selectedList.size() && ((player.experienceLevel >= xpCost && player.experienceLevel >= minLevel) || player.getAbilities().creativeMode)) {
 
@@ -800,7 +800,7 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
                 if (NewEnchantmentHelper.getEnchantments(itemStack).stream().anyMatch(Enchantment::isCursed)) {
                     // CURSED
                     this.context.run((world, blockPos) -> {
-                        System.out.println("CURSED! (BUTTON CLICKED!)");
+//                        System.out.println("CURSED! (BUTTON CLICKED!)");
                         this.resetOutput(this.screenIndex != NewEnchantmentHelper.TableScreens.CURSED.ordinal());
                         this.screenIndex = NewEnchantmentHelper.TableScreens.CURSED.ordinal();
                         this.generateTableStats();
@@ -821,12 +821,12 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
 
                             generateCurseliftClues(returnList, targetList);
 
-                            System.out.println("CLUES:");
-                            for (int z = 0; z < 10; z++) {
-                                if (outputIds[z] >= 0) {
-                                    System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
-                                }
-                            }
+//                            System.out.println("CLUES:");
+//                            for (int z = 0; z < 10; z++) {
+//                                if (outputIds[z] >= 0) {
+//                                    System.out.println(Enchantment.byRawId(outputIds[z]).getName(outputLevels[z]).getString() + " - " + clueAccuracy[z] + "%, Selected: " + selectedEnchants[z]);
+//                                }
+//                            }
 
                             // Calculate Requirements/Costs
 
@@ -847,10 +847,10 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
                                 minLevel = 0;
                             }
 
-                            System.out.println("SELECTED LIST:");
-                            for (NewEnchantmentLevelEntry entry : selectedList) {
-                                System.out.println(entry.enchantment.getName(entry.level).getString());
-                            }
+//                            System.out.println("SELECTED LIST:");
+//                            for (NewEnchantmentLevelEntry entry : selectedList) {
+//                                System.out.println(entry.enchantment.getName(entry.level).getString());
+//                            }
 
                             if (!selectedList.isEmpty() && itemStack2.getCount() >= selectedList.size() && ((player.experienceLevel >= xpCost && player.experienceLevel >= minLevel) || player.getAbilities().creativeMode)) {
 
@@ -996,7 +996,7 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
                 int CURSE_WEIGHT = Math.round(8f * (float) (100 / Math.max(synergy, 1)));
                 int chaosRandom = random.nextInt(REROLL_WEIGHT + LOST_WEIGHT + CURSE_WEIGHT);
                 int sum = REROLL_WEIGHT + LOST_WEIGHT + CURSE_WEIGHT;
-                System.out.println("CHAOS RANDOM: " + chaosRandom + "/" + sum);
+//                System.out.println("CHAOS RANDOM: " + chaosRandom + "/" + sum);
                 List<NewEnchantmentLevelEntry> totalList = passedTotalList == null ? NewEnchantmentHelper.getCompatibleEnchantmentList(
                         Math.max(5, NewEnchantmentHelper.getAveragePower(targetList.get(i).enchantment, targetList.get(i).level) + random.nextInt(Math.max(1, synergy)) - random.nextInt(chaos)),
                         -1,
@@ -1029,7 +1029,7 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
                     // CURSE!
                     int cursePower = Math.max(5, ((targetList.get(i).enchantment.getMinPower(targetList.get(i).level) + targetList.get(i).enchantment.getMaxPower(targetList.get(i).level)) / 2) - random.nextInt(synergy + 1));
 
-                    System.out.println("CURSED!");
+//                    System.out.println("CURSED!");
                     List<NewEnchantmentLevelEntry> totalCurseList = NewEnchantmentHelper.getCompatibleEnchantmentList(cursePower, -1, world.getEnabledFeatures(), treasureAllowed, true, true, false, 255, itemStack, NewEnchantmentHelper.getEnchantments(targetList));
                     if (totalCurseList.isEmpty()) {
                         returnList.add(null);
@@ -1045,10 +1045,10 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
             }
         }
 
-        System.out.println("RETURN LIST:");
-        for (NewEnchantmentLevelEntry entry2 : returnList) {
-            System.out.println(entry2 == null ? "ENCHANTMENT LOST!" : entry2.enchantment.getName(entry2.level).getString());
-        }
+//        System.out.println("RETURN LIST:");
+//        for (NewEnchantmentLevelEntry entry2 : returnList) {
+//            System.out.println(entry2 == null ? "ENCHANTMENT LOST!" : entry2.enchantment.getName(entry2.level).getString());
+//        }
 
         return returnList;
     }
@@ -1099,10 +1099,10 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
             }
         }
 
-        System.out.println("RETURN LIST:");
-        for (NewEnchantmentLevelEntry entry2 : returnList) {
-            System.out.println(entry2 == null ? "ENCHANTMENT LOST!" : entry2.enchantment.getName(entry2.level).getString());
-        }
+//        System.out.println("RETURN LIST:");
+//        for (NewEnchantmentLevelEntry entry2 : returnList) {
+//            System.out.println(entry2 == null ? "ENCHANTMENT LOST!" : entry2.enchantment.getName(entry2.level).getString());
+//        }
 
         return returnList;
     }
@@ -1417,12 +1417,12 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
             });
 
             for (NewEnchantmentHelper.LibraryBonusWithCategory entry : bonusList) {
-                System.out.println(entry.category);
-                try {
-                    System.out.println(AtheneumConfig.ComponentCategories.valueOf(entry.category.name()));
-                } catch (Exception ignored) { }
-                System.out.println(entry.category.name());
-                System.out.println(AtheneumConfig.ComponentCategories.bookshelf.name());
+                //System.out.println(entry.category);
+//                try {
+//                    System.out.println(AtheneumConfig.ComponentCategories.valueOf(entry.category.name()));
+//                } catch (Exception ignored) { }
+//                System.out.println(entry.category.name());
+//                System.out.println(AtheneumConfig.ComponentCategories.bookshelf.name());
                 if (entry.category == AtheneumConfig.ComponentCategories.bookshelf) {
                     tBookshelfCount++;
                     if (tBookshelfCount > NewEnchantmentHelper.getEnchantmentStatsPerLevel(NewEnchantmentHelper.TableLevelStats.MAX_BOOKSHELVES, enchantingLevel)) {
@@ -1490,9 +1490,9 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
             tomeCount = tTomeCount;
             artifactCount = tArtifactCount;
 
-            System.out.println("TOME COUNT: " + tTomeCount + " / " + NewEnchantmentHelper.getEnchantmentStatsPerLevel(NewEnchantmentHelper.TableLevelStats.MAX_TOMES, enchantingLevel));
-            System.out.println("BOOKSHELF COUNT: " + tBookshelfCount + " / " + NewEnchantmentHelper.getEnchantmentStatsPerLevel(NewEnchantmentHelper.TableLevelStats.MAX_BOOKSHELVES, enchantingLevel));
-            System.out.println("ARTIFACT COUNT: " + tArtifactCount + " / " + NewEnchantmentHelper.getEnchantmentStatsPerLevel(NewEnchantmentHelper.TableLevelStats.MAX_ARTIFACTS, enchantingLevel));
+//            System.out.println("TOME COUNT: " + tTomeCount + " / " + NewEnchantmentHelper.getEnchantmentStatsPerLevel(NewEnchantmentHelper.TableLevelStats.MAX_TOMES, enchantingLevel));
+//            System.out.println("BOOKSHELF COUNT: " + tBookshelfCount + " / " + NewEnchantmentHelper.getEnchantmentStatsPerLevel(NewEnchantmentHelper.TableLevelStats.MAX_BOOKSHELVES, enchantingLevel));
+//            System.out.println("ARTIFACT COUNT: " + tArtifactCount + " / " + NewEnchantmentHelper.getEnchantmentStatsPerLevel(NewEnchantmentHelper.TableLevelStats.MAX_ARTIFACTS, enchantingLevel));
         });
 
     }

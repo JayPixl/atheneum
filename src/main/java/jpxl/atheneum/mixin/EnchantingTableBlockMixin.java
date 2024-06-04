@@ -22,7 +22,7 @@ import jpxl.atheneum.ench.table.NewEnchantmentScreenHandler;
 public class EnchantingTableBlockMixin {
     @Inject(at = @At("HEAD"), method = "createScreenHandlerFactory", locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
     private void createScreenHandlerFactoryMixin(BlockState state, World world, BlockPos pos, CallbackInfoReturnable<NamedScreenHandlerFactory> cir) {
-        System.out.println("LOADING MOD FROM MIXIN");
+//        System.out.println("LOADING MOD FROM MIXIN");
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof EnchantingTableBlockEntity) {
             Text text = ((Nameable)((Object)blockEntity)).getDisplayName();

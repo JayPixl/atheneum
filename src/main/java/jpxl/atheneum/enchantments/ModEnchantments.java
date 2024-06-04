@@ -25,9 +25,9 @@ public class ModEnchantments {
             )
     );
 
-    public static Enchantment CURSE_OF_CHICKEN = Registry.register(
+    public static Enchantment POULTRIFICATION_CURSE = Registry.register(
             Registries.ENCHANTMENT,
-            new Identifier(Atheneum.MOD_ID, "curse_of_chicken"),
+            new Identifier(Atheneum.MOD_ID, "curse_of_poultrification"),
             new Enchantment(Enchantment.properties(
                     ItemTags.DURABILITY_ENCHANTABLE,
                     10,
