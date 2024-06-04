@@ -321,7 +321,7 @@ public abstract class NewEnchantmentHelper {
     public static final int DEFAULT_SYNERGY = 1;
     public static final int DEFAULT_QUANTITY = 1;
 
-    public static final List<BlockPos> POWER_PROVIDER_OFFSETS = BlockPos.stream(-2, 0, -2, 2, 2, 2).filter(pos -> Math.abs(pos.getX()) == 2 || Math.abs(pos.getZ()) == 2).map(BlockPos::toImmutable).toList();
+    public static final List<BlockPos> POWER_PROVIDER_OFFSETS = BlockPos.stream(-3, 0, -3, 3, 2, 3).filter(pos -> Math.abs(pos.getX()) == 2 || Math.abs(pos.getX()) == 3 || Math.abs(pos.getZ()) == 2 || Math.abs(pos.getZ()) == 3).map(BlockPos::toImmutable).toList();
 
     public enum TableLevelStats {
         MAX_POWER,
