@@ -1114,11 +1114,11 @@ public class NewEnchantmentScreenHandler extends ScreenHandler {
         for (NewEnchantmentLevelEntry entry2 : returnList) {
             // apply current insight and compare to power
 
-            if (currentInsight < 2) {
+            if (currentInsight < 2 && q != 0) {
                 break;
             }
 
-            int accuracy = (currentInsight / 2) + random.nextInt(currentInsight);
+            int accuracy = Math.max(1, currentInsight / 2) + random.nextInt(currentInsight);
             int totalPower = entry2 == null ? NewEnchantmentHelper.getAveragePower(targetList.get(q).enchantment, targetList.get(q).level) : NewEnchantmentHelper.getAveragePower(entry2.enchantment, entry2.level);
             if (accuracy >= totalPower) {
                 // Accurate clue!

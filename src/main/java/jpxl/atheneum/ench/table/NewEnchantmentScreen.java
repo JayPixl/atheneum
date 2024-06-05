@@ -587,10 +587,6 @@ public class NewEnchantmentScreen extends HandledScreen<NewEnchantmentScreenHand
         this.pageAngle = this.nextPageAngle;
         this.pageTurningSpeed = this.nextPageTurningSpeed;
         boolean bl = handler.screenIndex != NewEnchantmentHelper.TableScreens.NONE.ordinal();
-//        for (int i = 0; i < 3; ++i) {
-//            if (((NewEnchantmentScreenHandler)this.handler).enchantmentPower == 0) continue;
-//            bl = true;
-//        }
         this.nextPageTurningSpeed = bl ? (this.nextPageTurningSpeed += 0.2f) : (this.nextPageTurningSpeed -= 0.2f);
         this.nextPageTurningSpeed = MathHelper.clamp(this.nextPageTurningSpeed, 0.0f, 1.0f);
         float f = (this.approximatePageAngle - this.nextPageAngle) * 0.4f;

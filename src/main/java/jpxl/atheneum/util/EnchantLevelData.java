@@ -58,4 +58,29 @@ public class EnchantLevelData {
         nbt.putInt("level", 1);
         nbt.putInt("xp", 0);
     }
+
+    public static void setEnchantingLevel(IEntityDataSaver player, int level) {
+        NbtCompound nbt = getNbt(player);
+        nbt.putInt("level", level);
+    }
+
+    public static void addEnchantingLevels(IEntityDataSaver player, int levels) {
+        NbtCompound nbt = getNbt(player);
+        int currentLevel = nbt.getInt("level");
+        int newAmount = Math.clamp(currentLevel + levels, 1, 15);
+        nbt.putInt("level", newAmount);
+    }
+
+    public static void setEnchantingXp(IEntityDataSaver player, int xp) {
+        NbtCompound nbt = getNbt(player);
+        nbt.putInt("xp", xp);
+    }
+
+    public static void addEnchantingXp(IEntityDataSaver player, int xp) {
+        NbtCompound nbt = getNbt(player);
+        int currentXp = nbt.getInt("xp");
+        int level = nbt.getInt("level");
+        int newAmount = Math.clamp(currentXp + xp, 0, NewEnchantmentHelper.getEnchLevelXpPerLevel(level));
+        nbt.putInt("xp", newAmount);
+    }
 }
